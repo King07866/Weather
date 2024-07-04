@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %} Weather {% endblock title %}
+
+
+{% block body %}
+    <div class="row p-5 gradient_set" style="height: 650px;">
+        <div class="col-6">
+            <div class="m-5 p-5">
+                <img src="{% static 'images/images-removebg-preview.png' %}" alt="">
+            </div>
+        </div>
+        <div class="col-6 mt-5">
+            <div class="text-light">
+                <form action="http://127.0.0.1:8000/weatherapi/" method="POST">
+                    {% csrf_token %}
+                <h1 style="font: 1em sans-serif;">Enter Your Location</h1>
+                <div class="input-group" style="width: 300px;">
+                    <input type="text" class="form-control" name="city" placeholder="Search..." aria-label="Search">
+                    <button class="btn btn-outline-secondary bg-warning" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </div>
+                
+                <h2 style="font-size : 60px;" class="grad1 mt-5 mr-5">Welcome To Our</h2>
+                <h1 style="font-size : 100px;" class="grad mr-5 text-warning">Weather App</h1>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock body %}

@@ -1,0 +1,108 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %} Weather {% endblock title %}
+
+{% block main %}
+    <div class="row p-5 gradient_set" >
+        <div class="col-6">
+            <div class="m-5 p-5">
+                
+                <img src="{% static 'images/images-removebg-preview.png' %}" alt="">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="mt-5 text-light">
+                <p style="font-size : 30px;" class="grad ">{{ city }} </p>
+                <h2 style="font-size : 60px;" class="grad1">{{ forecast.0.Day }}</h2>
+                <h1 style="font-size : 150px;" class="grad">{{ forecast.0.Temp }}&deg;C</h1>
+                <button class="btn btn-warning px-5 rounded-5 mt-3" >{{ forecast.0.Description }}</button>
+            </div>
+        </div>
+    </div>
+   <div class="container">
+    <h1 class="text-center mt-3"> 5 Day Weather Forecast</h1>
+        <div class="row my-5">
+            <div class="col grads rounded-4 p-3 m-2">
+                <div class="row">
+                    <div class="col-5 text-left text-light p-4">
+                        <p style="font-size: 25px; margin-bottom: 0px;"> {{ forecast.5.Day }}</p>
+                        <h1 class="text-warning" style="font-size: 40px; margin-bottom: 0px;">{{ forecast.5.Temp }}&deg;C</h1>
+                        <p style="font-size: 20px; margin-bottom: 0px;">{{ forecast.5.Description }}</p>
+                    </div>
+                    <div class="col-5 text-light pt-4">
+                        <img src="{% static "images/images-removebg-preview.png" %}" alt="" width="130px" height="100px">
+                    </div>
+                </div>
+            </div>
+            <div class="col grads rounded-4 p-3 m-2 ">
+                <div class="row">
+                    <div class="col-5 text-left text-light p-4">
+                        <p style="font-size: 25px; margin-bottom: 0px;">{{ forecast.13.Day }}</p>
+                        <h1 class="text-warning" style="font-size: 40px; margin-bottom: 0px;">{{ forecast.13.Temp }}&deg;C</h1>
+                        <p style="font-size: 20px; margin-bottom: 0px;">{{ forecast.13.Description }}</p>
+                    </div>
+                    <div class="col-5 text-light pt-4">
+                        <img src="{% static "images/images-removebg-preview.png" %}" alt="" width="130px" height="100px">
+                    </div>
+                </div>
+            </div>
+            <div class="col grads rounded-4 p-3 m-2">
+                <div class="row">
+                    <div class="col-5 text-left text-light p-4">
+                        <p style="font-size: 25px; margin-bottom: 0px;">{{ forecast.20.Day }}</p>
+                        <h1 class="text-warning" style="font-size: 40px; margin-bottom: 0px;">{{ forecast.20.Temp }}&deg;C</h1>
+                        <p style="font-size: 20px; margin-bottom: 0px;">{{ forecast.20.Description }}</p>
+                    </div>
+                    <div class="col-5 text-light pt-4">
+                        <img src="{% static "images/images-removebg-preview.png" %}" alt="" width="130px" height="100px">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col grads rounded-4 mx-3"></div>
+            <div class="col grads rounded-4 mx-3"></div>
+            <div class="col grads rounded-4 mx-3"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col grads rounded-4 p-3 m-2">
+                <div class="row">
+                    <div class="col-5 text-left text-light p-4">
+                        <p style="font-size: 25px; margin-bottom: 0px;">{{ forecast.27.Day }}</p>
+                        <h1 class="text-warning" style="font-size: 40px; margin-bottom: 0px;">{{ forecast.27.Temp }}&deg;C</h1>
+                        <p style="font-size: 20px; margin-bottom: 0px;">{{ forecast.27.Description }}</p>
+                    </div>
+                    <div class="col-5 text-light pt-4">
+                        <img src="{% static "images/images-removebg-preview.png" %}" alt="" width="130px" height="100px">
+                    </div>
+                </div>
+            </div>
+            <div class="col grads rounded-4 p-3 m-2 ">
+                <div class="row">
+                    <div class="col-5 text-left text-light p-4">
+                        <p style="font-size: 25px; margin-bottom: 0px;">{{ forecast.34.Day }}</p>
+                        <h1 class="text-warning" style="font-size: 40px; margin-bottom: 0px;">{{ forecast.34.Temp }}&deg;C</h1>
+                        <p style="font-size: 20px; margin-bottom: 0px;">{{ forecast.34.Description }}</p>
+                    </div>
+                    <div class="col-5 text-light pt-4">
+                        <img src="{% static "images/images-removebg-preview.png" %}" alt="" width="130px" height="100px">
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="row">
+            <div class="col grads rounded-4 mx-3"></div>
+            <div class="col grads rounded-4 mx-3"></div>
+            <div class="col grads rounded-4 mx-3"></div>
+        </div>
+    </div>
+    {% endblock main %}
+

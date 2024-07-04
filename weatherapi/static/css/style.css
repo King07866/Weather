@@ -1,0 +1,28 @@
+.gradient_set
+    {
+        background: rgb(78,14,181);
+        background: linear-gradient(90deg, rgba(78,14,181,1) 47%, rgba(132,213,255,1) 100%, rgba(156,206,254,1) 100%);
+    }
+    .grads
+    {
+        background: rgb(50,12,111);
+        background: linear-gradient(90deg, rgba(50,12,111,1) 51%, rgba(157,126,209,1) 100%, rgba(202,220,237,1) 100%);
+    }
+    .grad
+    {
+        margin-bottom : -8px;
+    }
+    .grad1
+    {
+        margin-bottom : -30px;
+    }
+    .setslide
+    {
+        margin: 100px;
+    }
+    td
+    {
+        font-weight: 24px;
+        font-size: 40px;
+        padding-left:70px;
+    }
